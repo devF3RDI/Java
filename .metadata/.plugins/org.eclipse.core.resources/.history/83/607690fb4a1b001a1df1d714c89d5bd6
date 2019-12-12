@@ -1,0 +1,42 @@
+package studentdatabaseapp;
+
+import java.util.Scanner;
+
+public class Student {
+	
+	private String firstName;
+	private String lastName;
+	private int gradeYear;
+	private int uniqueID;
+	private String courses;
+	private int tuitionBalance;
+	private int fees = 600;
+	
+	
+	//constructor prompt user for student name and year. 
+	
+	public Student() {
+		
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter Student first name: ");
+		this.firstName = in.nextLine();
+		System.out.print("\nEnter Student last name: ");
+		this.lastName = in.nextLine();
+		System.out.print("\nEnter Student grade: \n1 for Freshmen \n2 for sophmore \n3 for Junior \n4 for Senior \n= ");
+		this.gradeYear = in.nextInt();
+		System.out.println(firstName +" "+ lastName +" "+ gradeYear);
+		
+		}
+	
+	//generate unique id
+	
+	//enroll in courses
+	
+	//view balance 
+	
+	//pay tutition
+	
+	//print info
+	
+	
+}
