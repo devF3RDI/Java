@@ -46,7 +46,7 @@ public class Student {
 		Scanner sc = new Scanner(System.in);
 		String course = sc.nextLine().toUpperCase();
 		if(!course.equals("Q")) {
-			courses = courses + "\n" + course;
+			courses = courses + "\n     " + course;
 			tuitionBalance = tuitionBalance + fees;
 		}
 		else break;
@@ -66,17 +66,29 @@ public class Student {
 		while(tuitionBalance > 0) {
 		System.out.println("The course costs are: $" + fees + " per course. ");
 		System.out.println("You Tuition Balance is: " + tuitionBalance);
-		System.out.println("Enter you payment amount: $");
+		System.out.println("Enter you payment amount \n(If you are unable to make a payment please enter 0) : ");
 		Scanner sc = new Scanner(System.in);
 		int payment = sc.nextInt();
+		if(payment == 0) break;
 		tuitionBalance = tuitionBalance - payment;
 		System.out.println("Thank you for your payment of $" + payment);
 		viewBalance();
-		}System.out.println("Your Tuition has been paid in full! Thankyou for your payment/s");
-	}
+		if(tuitionBalance == 0)
+			System.out.println("Your Tuition has been paid in full! Thankyou for your payment/s");
+			
+		}
+	}	
 		
 	
 	//print info
+	public String toString() {
+		return "Name :" + firstName + " " + lastName +
+				"\nStudent ID: " + uniqueID +
+				"\nGrade Level: " + gradeYear +
+				"\nYour Tuition Balance: $" + tuitionBalance + 
+				"\nCourses Enrolled: " + courses; 
+				
+	}
 	
 	
 }
