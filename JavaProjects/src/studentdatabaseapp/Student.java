@@ -63,13 +63,18 @@ public class Student {
 	
 	//pay tutition
 	public void payTuition() {
+		while(tuitionBalance > 0) {
+		System.out.println("The course costs are: $" + fees + " per course. ");
+		System.out.println("You Tuition Balance is: " + tuitionBalance);
 		System.out.println("Enter you payment amount: $");
 		Scanner sc = new Scanner(System.in);
 		int payment = sc.nextInt();
 		tuitionBalance = tuitionBalance - payment;
 		System.out.println("Thank you for your payment of $" + payment);
 		viewBalance();
+		}System.out.println("Your Tuition has been paid in full! Thankyou for your payment/s");
 	}
+		
 	
 	//print info
 	
